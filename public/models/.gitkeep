@@ -1,0 +1,7 @@
+# 3D Models Directory
+
+This directory will contain 3D models for characters and environment elements.
+
+Required models:
+- character_base.glb - Base character model
+- environment_tavern.glb - Tavern environment model

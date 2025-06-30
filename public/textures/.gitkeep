@@ -1,0 +1,9 @@
+# Textures Directory
+
+This directory will contain textures for 3D models.
+
+Subdirectories:
+- /skin - Character skin textures
+- /hair - Character hair textures
+- /armor - Character armor textures
+- /environment - Environment textures

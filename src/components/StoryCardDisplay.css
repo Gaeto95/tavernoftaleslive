@@ -1,0 +1,107 @@
+/* Story Card Animation Styles */
+.perspective-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 500px;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-back {
+  transform: rotateY(0deg);
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+.card-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-back.card-flipped {
+  transform: rotateY(360deg);
+}
+
+/* Card Type Colors */
+.card-type-event {
+  background: linear-gradient(to bottom, #991b1b, #7f1d1d);
+  border-color: #ef4444;
+}
+
+.card-type-character {
+  background: linear-gradient(to bottom, #1e40af, #1e3a8a);
+  border-color: #3b82f6;
+}
+
+.card-type-item {
+  background: linear-gradient(to bottom, #6b21a8, #581c87);
+  border-color: #a855f7;
+}
+
+.card-type-location {
+  background: linear-gradient(to bottom, #166534, #14532d);
+  border-color: #22c55e;
+}
+
+.card-type-twist {
+  background: linear-gradient(to bottom, #92400e, #78350f);
+  border-color: #f59e0b;
+}
+
+/* Card Glow Effects */
+.card-glow {
+  animation: cardGlow 2s infinite alternate;
+}
+
+@keyframes cardGlow {
+  from {
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.8), 0 0 50px rgba(251, 191, 36, 0.4);
+  }
+}
+
+/* Card Reveal Animation */
+.card-reveal {
+  animation: cardReveal 1s forwards;
+}
+
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Magical Particles */
+.magical-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.8) 0%, rgba(251, 191, 36, 0) 70%);
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 1;
+  }
+}
